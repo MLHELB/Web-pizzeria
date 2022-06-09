@@ -1,0 +1,548 @@
+body{
+    font-size: 10px;
+}
+
+.contenedor-global{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows:repeat(7,auto);
+    grid-template-areas: "oferta"
+                         "nav"
+                         "titulo"
+                         "fondo"
+                         "redes"
+                         "mapa"
+                         "footer";
+                         -webkit-animation-name: presentacion;
+                                 animation-name: presentacion;  
+                         -webkit-animation-fill-mode:forwards ;  
+                                 animation-fill-mode:forwards ;
+                         -webkit-animation-duration: 4.5s;
+                                 animation-duration: 4.5s;
+                    
+}
+.oferta{
+    grid-area: oferta;
+    font-size: 25px;
+    background-color:#f3f99a;
+    font-weight: bold;
+    font-family: 'Pompiere', cursive;
+    
+    
+}
+.texto{
+    height: 2.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #090909;
+    padding: 1.5em 0;
+}
+.texto__color{
+    text-decoration:underline;
+    color: #f00;
+}
+@-webkit-keyframes presentacion {
+    0%{opacity: 0;}
+    
+}
+@keyframes presentacion {
+    0%{opacity: 0;}
+    
+}
+/* ------------------------------------------------------------------------------------------ */
+/* -----------------------------------Nav---------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+
+
+/* font-family: 'Shrikhand', cursive; */
+
+
+.header{
+    grid-area: nav;
+    font-size: 25px;
+    font-family: 'Shrikhand', cursive; 
+}
+.nav__lista{
+    /* background-color: aqua; */
+    height: 100px; 
+    display: flex;
+}
+.logo-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      width: 20%;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      /* background-color: #000; */
+}
+.logo1,.logo2{
+    text-decoration: none;
+    color: #f00;
+}
+.menu-container{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 80%;
+    font-family: 'Pompiere', cursive;
+    font-size: 1.5em;
+    -webkit-animation-name: animacion-uno;
+            animation-name: animacion-uno;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+}
+.nav__lista-menu{
+    padding: 0 20px;
+    list-style: none;
+}
+.nav__lista-a{
+    text-decoration: none;
+    color: #f00;
+}
+@-webkit-keyframes animacion-uno {
+    0%{transform: translateX(-100%);
+             
+}
+100%{
+    transform: (translateY(0));
+}
+}
+@keyframes animacion-uno {
+    0%{transform: translateX(-100%);
+             
+}
+100%{
+    transform: (translateY(0));
+}
+}
+/* ------------------------------------------------------------------------------------------ */
+/* ----------------------------------titulo-------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+.titulo{
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    font-family: 'Shrikhand', cursive;
+    color: #f00;
+    
+   
+}
+/* ------------------------------------------------------------------------------------------ */
+/* ----------------------------------fondo-------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+.fondo{
+    grid-area: fondo;
+    font-size: 20px;
+    position: relative;
+    width:100%;
+    height: 35em;
+}
+
+.fondo::before{
+    content: "";
+    position: absolute;
+    background-image: url(/docs/assets/Local/pizzacontacto.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.informacion{
+    position: absolute;
+    font-size: 25px;
+    z-index: 10;
+    background-color: #ca1717;
+    width: 40%;
+    height: 20em;
+    border-radius: 5px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: #fff;display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+ .informacion__horarios-titulo{
+    padding: 1em;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Shrikhand', cursive;
+}
+.informacion__horarios-particular{
+    padding: 1.2em;
+    border-bottom: 1px solid #fff;
+    font-size: 1em;
+    font-family: 'Pompiere', cursive;
+}
+.contacto{
+    color: #fff;
+    padding: 0 0.5em;
+    display: flex;
+    justify-content: center;
+    margin: 0.5em ;
+    font-family: 'Pompiere', cursive;
+    font-size: 1.3em;
+}
+
+.tel{
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* ----------------------------------redessociales-------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+.redessociales{
+    font-size: 22px;
+    grid-area: redes;
+    display: flex;
+    flex-direction: row;
+    background-color: #a17171;
+    height:20em ;
+    width: 80%;
+    margin: auto;
+    font-family: 'Pompiere', cursive;
+}
+
+.redes{
+    background-color:#f9fccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20em;
+    width: 40%;
+}
+
+.seguir__titulo{
+    font-size: 2em;
+    text-align: center;
+    color: #ca1717;
+}
+.iconosuno{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 1em;  
+}
+.iconos__hover{
+    font-size: 2em;
+}
+.iconos__hover:hover{
+    font-size: 1.8em;
+    transition: 1s;
+}
+.iconosuno a{
+    padding: 0 0.75em;
+}
+.insta{
+    color: #ee35db;
+}
+.face{
+    color: #088df3;
+}
+.twitter{
+    color: aqua;
+}
+.imagen{
+    height: 20em;
+    width: 60%;
+    position: relative;
+}
+.imagen::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url(/docs/assets/Local/niñopizza.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* ----------------------------------mapa-------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+#mapa{
+   width: 75%;
+   height: 25rem;
+   margin: auto;
+   grid-area: mapa;
+}
+.map{
+    width: 100%;
+    height: 100%;
+    outline:none;  
+}
+/* <!-- Footer -------------------------------------------------------------------------------->
+<!-- Footer -------------------------------------------------------------------------------->
+<!-- Footer --------------------------------------------------------------------------------> */
+.piedepag{
+    grid-area: footer;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    height:2em;
+    background-color: #f00;
+    color: #fff;
+    font-family: 'Pompiere', cursive;
+}
+
+
+.datos{
+    font-weight: bold;
+}
+.creador__copy{
+    padding:0 0.3em;
+    font-size: 0.8rem;
+    color: #fff;
+}
+.iconos__redes{
+    padding: 0 0.4em;
+    color: #fff;
+}
+.iconos__redes:hover{
+    color: #000;
+    transition: 2s;
+
+}
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* ----------------------------------MediaQueris--------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------ */
+
+@media screen and (max-width:799px ){
+
+    .oferta{
+        font-size: 20px;
+    }
+    .texto{
+        padding: 0.5em  0;
+        height: auto;
+        text-align: center;
+
+    }
+    .texto__color{
+        display: flex;
+        justify-content: center;
+    }
+  
+    .header{
+        font-size: 20px;
+      
+    }
+    .nav__lista{
+        height: auto; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .nav__lista-menu{
+        padding: 0;
+        list-style: none;
+    }
+   
+    .logo-container{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.5em;
+          width: 100%;
+          padding: 0.5em 0;
+        
+    }
+    .menu-container{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        font-size: 1.1em;
+        padding: 0.5em 0;
+        font-family: 'Pompiere', cursive;
+    }
+    .titulo{
+        display: none;
+    }
+    .informacion{
+        position: absolute;
+        font-size: 15px;
+        z-index: 10;
+        background-color: #ca1717;
+        width: 55%;
+        height:-webkit-max-content;
+        height:-moz-max-content;
+        height:max-content;
+        border-radius: 5px;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        color: #fff;
+        padding: 1em 0;
+    }
+    .redessociales{
+        font-size: 10px;
+        grid-area: redes;
+        display: flex;
+        flex-direction: row;
+        background-color: #a17171;
+        height:20em ;
+        width: 100%;
+        margin: auto;
+        font-family: 'Pompiere', cursive;
+    }
+    
+    .redes{
+        background-color:#f9fccc;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 20em;
+        width: 40%;
+    }
+    
+    .seguir__titulo{
+        font-size: 2em;
+        text-align: center;
+        color: #ca1717;
+    }
+    .iconosuno{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        padding-top: 1em;  
+    }
+    .imagen{
+        height: 20em;
+        width: 60%;
+        position: relative;
+    }
+    .imagen::before{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-image: url(/docs/assets/Local/gentepizza.webp);
+        background-attachment:inherit;
+        background-repeat: inherit;
+        background-size: cover;
+    }
+    #mapa{
+        width: 100%;
+        height: 8rem;
+        margin: auto;
+        grid-area: mapa;
+
+     }
+     .map{
+         width: 100%;
+         height: 100%;
+         outline:none;  
+     }
+     .piedepag{
+        grid-area: footer;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 17px;
+        height:auto;
+        background-color: #f00;
+        color: #fff;
+        font-family: 'Pompiere', cursive;
+        padding: 0.2em 0;
+    }
+    .piedepag div {
+        padding: 0.1em 0;
+    }
+    
+    .datos{
+        font-weight: bold;
+    }
+    
+    .creador__copy{
+        display: none;
+    
+    }
+    .iconos__redes{
+        padding: 0 5px;
+    
+    }
+ }
+
+
+ @media screen and (min-width:800px ){
+
+.logo-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+        width: 25%;
+}
+  .menu-container{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 75%;
+    font-family: 'Pompiere', cursive;
+    font-size: 1.2em;
+}
+.imagen{
+    height: 20em;
+    width: 65%;
+    position: relative;
+}
+
+
+.informacion{
+    position: absolute;
+    font-size: 25px;
+    z-index: 10;
+    background-color: #ca1717;
+    width: 50%;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    border-radius: 5px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: #fff;display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+ }
+

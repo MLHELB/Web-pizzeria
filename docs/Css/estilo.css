@@ -1,0 +1,403 @@
+body{
+    font-size: 10px;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows:repeat(4,auto);
+    grid-template-areas: "oferta oferta"
+                         "nav nav"
+                         "imagen imagen"
+                         "personal personal";
+                         -webkit-animation-name: presentacion;
+                                 animation-name: presentacion;  
+                         -webkit-animation-fill-mode:forwards ;  
+                                 animation-fill-mode:forwards ;
+                         -webkit-animation-duration: 4.5s;
+                                 animation-duration: 4.5s;
+}
+@-webkit-keyframes presentacion {
+    0%{opacity: 0;}
+    
+}
+@keyframes presentacion {
+    0%{opacity: 0;}
+    
+}
+/* ------------------------------------------------------------------------------------------ */
+/* -----------------------------------Oferta------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+.oferta{
+    grid-area: oferta;
+    font-size: 25px;
+    background-color:#f3f99a;
+    font-weight: bold;
+    font-family: 'Pompiere', cursive;
+}
+.texto{
+    height: 2.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(9, 9, 9);
+    padding: 1.5em 0;
+}
+.texto__color{
+    text-decoration:underline;
+    color: #f00;
+}
+/* ------------------------------------------------------------------------------------------ */
+/* -----------------------------------Nav---------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+
+.header{
+    grid-area: nav;
+    font-size: 25px;
+    font-family: 'Shrikhand', cursive; 
+}
+.nav__lista{
+    height: 5em; 
+    display: flex;
+}
+.logo-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 2em;
+      width: 20%;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      
+}
+.logo1,.logo2{
+    text-decoration: none;
+    color: #f00;
+}
+.menu-container{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 80%;
+    font-family: 'Pompiere', cursive;
+    font-size: 1.4em;
+    -webkit-animation-name: animacion-uno;
+            animation-name: animacion-uno;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+}
+.nav__lista-menu{
+    padding: 0 20px;
+    list-style: none;
+}
+.nav__lista-a{
+    text-decoration: none;
+    color: #f00;
+}
+
+
+@-webkit-keyframes animacion-uno {
+    0%{transform: translateX(-100%);
+             
+}
+100%{
+    transform: (translateY(0));
+}
+}
+
+
+@keyframes animacion-uno {
+    0%{transform: translateX(-100%);
+             
+}
+100%{
+    transform: (translateY(0));
+}
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* ---------------------------------Imagen--------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+
+.fondo{
+    font-size: 10px;
+    grid-area: imagen;
+    width: auto;
+    height:100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Pompiere', cursive;
+  
+}
+.fondo::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url(/docs/assets/Local/pizzaprincipal.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-filter:brightness(0.8);
+            filter:brightness(0.8)
+}
+
+.contenedor-titulo{
+    font-size: 5em;
+    z-index: 20;
+    text-align: center;
+    color: aliceblue;
+   
+} 
+.titulo{
+    -webkit-animation-name: animacion-dos;
+            animation-name: animacion-dos;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+}    
+.dos{
+    font-size: 6rem;
+}
+.botones{
+    position: relative;
+    top: -1.5em;
+    margin: 0 1em;
+    background-color:transparent;
+    font-size: 0.9em;
+    padding: 0 2em;
+    border: 1px solid #fff;
+    border-radius:180px;
+    text-decoration: none;
+    color: #fff;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+.botones:hover{
+    background-color:#f00;
+    transition: 1s;
+}
+
+@-webkit-keyframes animacion-dos {
+    0%{transform: translateY(-200%);
+             
+}
+100%{
+    transform: (translateY(0));
+}
+}
+
+@keyframes animacion-dos {
+    0%{transform: translateY(-200%);
+             
+}
+100%{
+    transform: (translateY(0));
+}
+}
+/* ------------------------------------------------------------------------------------------ */
+/* ---------------------------------footer--------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+.piedepag{
+    grid-area: personal;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    height:2em;
+    background-color: #f00;
+    color: #fff;
+    font-family: 'Pompiere', cursive;
+}
+
+
+.datos{
+    font-weight: bold;
+}
+
+.creador__copy{
+    padding:0 0.3em;
+    font-size: 0.8rem;
+    color: #fff;
+}
+.iconos__redes{
+    padding: 0 0.4em;
+    color: #fff;
+}
+.iconos__redes:hover{
+    color: #000;
+    transition: 2s;
+
+}
+
+
+@media screen and (max-width:799px ){
+
+    .oferta{
+        font-size: 20px;
+    }
+    .texto{
+        padding: 0.5em  0;
+        height: auto;
+        text-align: center;
+    }
+    .texto__color{
+        display: flex;
+        justify-content: center;
+    }
+  
+    .header{
+        font-size: 20px;
+      
+    }
+    .nav__lista{
+        height: auto; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .nav__lista-menu{
+        padding: 0;
+        list-style: none;
+    }
+   
+    .logo-container{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.5em;
+          width: 100%;
+          padding: 0.5em 0;
+        
+    }
+    .menu-container{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        font-size: 1.1em;
+        padding: 0.5em 0;
+        font-family: 'Pompiere', cursive;
+       
+    }
+    .fondo{
+        font-size: 10px;
+        grid-area: imagen;
+        width: auto;
+        height:100vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Pompiere', cursive;
+      
+    }
+    .fondo::after{
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-image: url(/docs/assets/Local/pizzaprincipal.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-filter:brightness(0.8);
+                filter:brightness(0.8)
+    }
+    
+    .contenedor-titulo{
+        font-size: 3em;
+        z-index: 20;
+        text-align: center;
+        color: aliceblue;
+    }
+    .dos{
+        font-size: 3rem;
+    }
+    .botones{
+        position: relative;
+        top: 1em;
+        margin: 0em;
+        background-color:transparent;
+        font-size: 1em;
+        padding: 0 1em;
+        border: 1px solid #fff;
+        border-radius:180px;
+        text-decoration: none;
+        color: #fff;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+    }
+  
+    
+
+
+    .piedepag{
+        grid-area: personal;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 17px;
+        height:auto;
+        background-color: #f00;
+        color: #fff;
+        font-family: 'Pompiere', cursive;
+        padding: 0.2em 0;
+    }
+    .piedepag div {
+        padding: 0.1em 0;
+    }
+    
+    .datos{
+        font-weight: bold;
+    }
+    
+    .creador__copy{
+        display: none;
+ 
+    }
+    .iconos__redes{
+        padding: 0 5px;
+ 
+    }
+   
+}
+
+@media screen and (min-width:800px ){
+
+    .logo-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+        width: 25%;
+  }
+  .menu-container{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 75%;
+    font-family: 'Pompiere', cursive;
+    font-size: 1.2em;
+}
+}
+
+
+
+
+
+

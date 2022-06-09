@@ -1,0 +1,418 @@
+body{
+    font-size: 10px;
+}
+
+.contenedor-global{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows:repeat(5,auto);
+    grid-template-areas: "oferta"
+                         "nav"
+                         "titulo"
+                         "carta"
+                         "footer";
+                         -webkit-animation-name: presentacion;
+                                 animation-name: presentacion;  
+                         -webkit-animation-fill-mode:forwards ;  
+                                 animation-fill-mode:forwards ;
+                         -webkit-animation-duration: 4.5s;
+                                 animation-duration: 4.5s;
+}
+@-webkit-keyframes presentacion {
+    0%{opacity: 0;}
+    
+}
+@keyframes presentacion {
+    0%{opacity: 0;}
+    
+}
+.oferta{
+    grid-area: oferta;
+    font-size: 25px;
+    background-color:#f3f99a;
+    font-weight: bold;
+    font-family: 'Pompiere', cursive;
+    
+    
+}
+.texto{
+    height: 2.3em;
+    padding: 1.5em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(9, 9, 9);
+}
+.texto__color{
+    text-decoration:underline;
+    color: #f00;
+}
+/* ------------------------------------------------------------------------------------------ */
+/* -----------------------------------Nav---------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+
+
+/* font-family: 'Shrikhand', cursive; */
+
+
+.header{
+    grid-area: nav;
+    font-size: 25px;
+    font-family: 'Shrikhand', cursive; 
+}
+.nav__lista{
+    
+    height: 100px; 
+    display: flex;
+}
+.logo-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      width: 20%;
+   
+}
+.logo1,.logo2{
+    text-decoration: none;
+    color: #f00;
+}
+.menu-container{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 80%;
+    font-family: 'Pompiere', cursive;
+    font-size: 1.5em;
+    -webkit-animation-name: animacion-uno;
+            animation-name: animacion-uno;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+}
+.nav__lista-menu{
+    padding: 0 20px;
+    list-style: none;
+}
+.nav__lista-a{
+    text-decoration: none;
+    color: #f00;
+}
+@-webkit-keyframes animacion-uno {
+    0%{transform: translateX(-100%);
+             
+}
+100%{
+    transform: (translateY(0));
+}
+}
+@keyframes animacion-uno {
+    0%{transform: translateX(-100%);
+             
+}
+100%{
+    transform: (translateY(0));
+}
+}
+/* ------------------------------------------------------------------------------------------ */
+/* ----------------------------------titulo-------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+.titulo{
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    font-family: 'Shrikhand', cursive;
+    color: #f00;
+}
+/* ------------------------------------------------------------------------------------------ */
+/* ----------------------------------menu-------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */ 
+
+.cartaContenedor{
+    position: relative;
+    grid-area: carta;
+    font-size: 20px;
+    font-family: 'Pompiere', cursive;
+    font-weight: bolder;
+}
+.cartaContenedor::before{
+    content:"";
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+    background-image: url(/docs/assets/Local/pizzacarta.jpg);
+    background-repeat: no-repeat;
+    -webkit-filter: brightness(0.6);
+            filter: brightness(0.6);
+    background-size: cover;
+}
+.cartaContenedor__titulo{
+    display: flex;
+    justify-content: center;
+    margin:1em;
+}
+.titulopc,.titulope,.tituloop{
+    border-bottom: 1px solid #fff;
+    padding: 0.3em;
+    position: relative;
+    color: #fff;
+}
+.pizzasclasicas,.pizzasespeciales,.otrostipospizza{
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    color: #fff;
+    padding: 1em;
+    /* border-bottom: 1px solid #f3f99a */
+}
+
+.tipos,.particular,.mediana,.familiar{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items:flex-end;
+    font-size: 1.5em;
+}
+
+.tipos p:hover{
+     border-bottom: 1px solid #fff;
+     margin: 0;
+     padding: 0;
+}
+.titulo1,.titulo2,.titulo3{
+    position: absolute;
+    top:-1em;
+    font-size: 1.2em;
+}
+/* ------------------------------------------------------------------------------------------ */
+/* ----------------------------------footer-------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+.piedepag{
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    height:2em;
+    background-color: #f00;
+    color: #fff;
+    font-family: 'Pompiere', cursive;
+}
+
+
+.datos{
+    font-weight: bold;
+}
+.creador__copy{
+    padding:0 0.3em;
+    font-size: 0.8rem;
+    color: #fff;
+}
+.iconos__redes{
+    padding: 0 0.4em;
+    color: #fff;
+}
+.iconos__redes:hover{
+    color: #000;
+    transition: 2s;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* ----------------------------------MediaQueris--------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------ */
+
+
+@media screen and (max-width:799px ){
+    .contenedor-global{
+        display: grid;
+        grid-template-rows:repeat(4,auto);
+        grid-template-areas: "oferta"
+                             "nav"
+                             "carta"
+                             "footer";
+                           
+    }
+    .oferta{
+        font-size: 20px;
+    }
+    .texto{
+        padding: 0.5em 0;
+        height: auto;
+        text-align: center;
+       
+    }
+    .texto__color{
+        display: flex;
+        justify-content: center;
+    }
+  
+    .header{
+        font-size: 20px;
+      
+    }
+    .nav__lista{
+        height: auto; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .nav__lista-menu{
+        padding: 0;
+        list-style: none;
+    }
+   
+    .logo-container{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.5em;
+          width: 100%;
+          padding: 0.5em 0;
+          -webkit-user-select: none;
+             -moz-user-select: none;
+              -ms-user-select: none;
+                  user-select: none;
+        
+    }
+    .menu-container{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        font-size: 1.1em;
+        padding: 0.5em 0;
+        font-family: 'Pompiere', cursive;
+       
+    }
+
+    .titulo{
+        display: none;
+    }
+    .cartaContenedor{
+        position: relative;
+        grid-area: carta;
+        font-size: 15px;
+        font-family: 'Pompiere', cursive;
+        font-weight: bolder;
+    }
+    .cartaContenedor::before{
+        content:"";
+        width: 100%;
+        height: 100%;
+        position: absolute; 
+        background-image: url(/docs/assets/Local/pizzacarta.jpg);
+        background-repeat: no-repeat;
+        -webkit-filter: brightness(0.6);
+                filter: brightness(0.6);
+        background-size: cover;
+    }
+    .cartaContenedor__titulo{
+        display: flex;
+        justify-content: center;
+        margin:1em;
+    }
+    .titulopc,.titulope,.tituloop{
+        border-bottom: 1px solid #fff;
+        padding: 0.3em;
+        position: relative;
+        color: #fff;
+    }
+    .pizzasclasicas,.pizzasespeciales,.otrostipospizza{
+        display: flex;
+        position: relative;
+        justify-content: space-evenly;
+        color: #fff;
+        padding: 1em;
+        
+    }
+    
+    .tipos,.particular,.mediana,.familiar{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items:flex-end;
+        font-size: 1em;
+        padding: 0 1.5em;
+    }
+    .titulo1,.titulo2,.titulo3{
+        position: absolute;
+        top:-1em;
+        font-size: 1.2em;
+    }
+
+
+
+    .piedepag{
+        grid-area: footer;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 17px;
+        height:auto;
+        background-color: #f00;
+        color: #fff;
+        font-family: 'Pompiere', cursive;
+        padding: 0.2em 0;
+    }
+    .piedepag div {
+        padding: 0.1em 0;
+    }
+    
+    .datos{
+        font-weight: bold;
+    }
+    
+    .creador__copy{
+        display: none;
+ 
+    }
+    .iconos__redes{
+        padding: 0 5px;
+ 
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:800px ){
+
+    .logo-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+        width: 25%;
+  }
+  .menu-container{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 75%;
+    font-family: 'Pompiere', cursive;
+    font-size: 1.2em;
+}
+}

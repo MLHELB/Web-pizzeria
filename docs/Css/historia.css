@@ -1,0 +1,666 @@
+body{
+    font-size: 10px;
+}
+
+.contenedor-global{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows:repeat(7,auto);
+    grid-template-areas: "oferta"
+                         "nav"
+                         "titulo"
+                         "imagen1"
+                         "imagen2"
+                         "personal"
+                         "footer";
+                         -webkit-animation-name: presentacion;
+                                 animation-name: presentacion;  
+                         -webkit-animation-fill-mode:forwards ;  
+                                 animation-fill-mode:forwards ;
+                         -webkit-animation-duration: 4.5s;
+                                 animation-duration: 4.5s;
+}
+.oferta{
+    grid-area: oferta;
+    font-size: 25px;
+    background-color:#f3f99a;
+    font-weight: bold;
+    font-family: 'Pompiere', cursive;
+    
+    
+}
+.texto{
+    height: 2.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #090909;
+}
+.texto__color{
+    text-decoration:underline;
+    color: #f00;
+}
+
+@-webkit-keyframes presentacion {
+    0%{opacity: 0;}
+    
+}
+
+@keyframes presentacion {
+    0%{opacity: 0;}
+    
+}
+/* ------------------------------------------------------------------------------------------ */
+/* -----------------------------------Nav---------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+
+.header{
+    grid-area: nav;
+    font-size: 25px;
+    font-family: 'Shrikhand', cursive; 
+}
+.nav__lista{
+    /* background-color: aqua; */
+    height: 100px; 
+    display: flex;
+}
+.logo-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      width: 20%;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      /* background-color: #000; */
+}
+.logo1,.logo2{
+    text-decoration: none;
+    color: #f00;
+}
+.menu-container{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 80%;
+    font-family: 'Pompiere', cursive;
+    font-size: 1.5em;
+    -webkit-animation-name: animacion-uno;
+            animation-name: animacion-uno;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+}
+.nav__lista-menu{
+    padding: 0 20px;
+    list-style: none;
+}
+.nav__lista-a{
+    text-decoration: none;
+    color: #f00;
+}
+@-webkit-keyframes animacion-uno {
+    0%{transform: translateX(-100%);
+             
+}
+100%{
+    transform: (translateY(0));
+}
+}
+@keyframes animacion-uno {
+    0%{transform: translateX(-100%);
+             
+}
+100%{
+    transform: (translateY(0));
+}
+}
+/* ------------------------------------------------------------------------------------------ */
+/* ----------------------------------titulo-------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+.titulo{
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    font-family: 'Shrikhand', cursive;
+    color: #f00;
+}
+/* ------------------------------------------------------------------------------------------ */
+/* ---------------------------------imagen1-------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+.imagenfondo1{
+    grid-area: imagen1;
+    font-size: 20px;
+    height: 40em;
+    width: 100%;
+    position: relative;
+
+}
+.imagenfondo1::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(/docs/assets/Local/pizzahistoria1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cuadro{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "descrip nada";
+    width: 80%;
+    height: 20em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.descripcion{
+    grid-area: descrip;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.descripcion__titulo,.historia__titulo{
+    padding: 1em 0;
+    font-family: 'Shrikhand', cursive;
+    color: #f00;
+}
+.descripcion__parrafo,.historia__parrafo{
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0.5em;
+    font-family: 'Pompiere', cursive;
+}
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* ---------------------------------imagen2-------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+.imagen2{
+    grid-area: imagen2;
+    background-color:transparent;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "descrip nada";
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+}
+
+.historia{
+    background-color:#f9fccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 20em; 
+}
+.historia__imagen{
+     height: 20em;
+}
+
+.historia__imagen-pizzero{
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+ }
+
+/* ------------------------------------------------------------------------------------------ */
+/* ---------------------------------personal-------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+.personal{
+    font-size: 20px;
+    grid-area: personal;
+    width: 80%;
+    height:33em ;
+    position: relative;
+    margin: auto;
+}
+.personal::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image:url(/docs/assets/Local/pizzahistoria2.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+}
+
+.informacion{
+    position: absolute;
+    font-size: 20px;
+    z-index: 10;
+    background-color: #ca1717;
+    width: 85%;
+    height: 26em;
+    border-radius: 5px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;;
+    margin: auto;
+    color: #fff;
+}
+.informacion__titulo{
+    text-align: center;
+    font-size: 1.3em;
+    font-family: 'Shrikhand', cursive;
+}
+.informacion__texto{
+    text-align: center;
+    padding: 0.5em;
+    font-size: 1.2em;
+    font-family: 'Pompiere', cursive;
+}
+.informacion__horarios{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em;
+    font-family: 'Pompiere', cursive;
+}
+ .informacion__horarios-titulo{
+    padding: 0.5em;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Shrikhand', cursive;
+}
+.informacion__horarios-particular{
+    padding: 0.8em;
+    border-bottom: 1px solid #fff;
+    font-size: 1em;
+}
+.contacto{
+    color: #fff;
+    padding: 0 0.5em;
+    display: flex;
+    justify-content: center;
+    margin: 0.5em ;
+    font-family: 'Pompiere', cursive;
+    font-size: 1.3em;
+}
+.tel{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* ---------------------------------footer-------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+.piedepag{
+    grid-area: footer;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    height:2em;
+    background-color: #f00;
+    color: #fff;
+    font-family: 'Pompiere', cursive;
+}
+
+
+.datos{
+    font-weight: bold;
+}
+.creador__copy{
+    padding:0 0.3em;
+    font-size: 0.8rem;
+    color: #fff;
+}
+.iconos__redes{
+    padding: 0 0.4em;
+    color: #fff;
+}
+.iconos__redes:hover{
+    color: #000;
+    transition: 2s;
+
+}
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* ----------------------------------MediaQueris--------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------ */
+ @media screen and (max-width:799px ){
+    .contenedor-global{
+        display: grid;
+        grid-template-rows:repeat(6,auto);
+        grid-template-areas: "oferta"
+                             "nav"
+                             "imagen1"
+                             "imagen2"
+                             "personal"
+                             "footer";
+                           
+    }
+    .oferta{
+        font-size: 20px;
+    }
+    .texto{
+        padding: 0.5em  0;
+        height: auto;
+        text-align: center;
+
+    }
+    .texto__color{
+        display: flex;
+        justify-content: center;
+    }
+  
+    .header{
+        font-size: 20px;
+      
+    }
+    .nav__lista{
+        height: auto; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .nav__lista-menu{
+        padding: 0;
+        list-style: none;
+    }
+   
+    .logo-container{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.5em;
+          width: 100%;
+          padding: 0.5em 0;
+          -webkit-user-select: none;
+             -moz-user-select: none;
+              -ms-user-select: none;
+                  user-select: none;
+        
+    }
+    .menu-container{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        font-size: 1.1em;
+        padding: 0.5em 0;
+        font-family: 'Pompiere', cursive;
+    }
+    .titulo{
+        display: none;
+    }
+    .imagenfondo1{
+        grid-area: imagen1;
+        font-size: 15px;
+        height: 40em;
+        width: 100%;
+        position: relative;
+    }
+    .cuadro{
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-areas: "descrip";
+        width: 90%;
+        height: auto;  
+    }
+    .descripcion{
+        padding: 1em 0;
+    }
+    .imagen2{
+        grid-area: imagen2;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(2,auto);
+        grid-template-areas: "pizzero"
+                             "historia";
+        background-color:transparent;
+        width: 100%;
+        margin: auto;
+        font-size: 15px;
+    }
+    .historia__imagen{
+        grid-area: pizzero;
+        
+   }
+    .historia{
+        grid-area: historia;
+        background-color:#f9fccc;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: 25em;
+    }
+    .historia__imagen{
+         height: 30em;
+         -o-object-fit: cover;
+            object-fit: cover;
+    }
+    
+    .personal{
+    font-size: 20px;
+    grid-area: personal;
+    width: 100%;
+    height:35em ;
+    position: relative;
+    margin: auto;
+}
+.personal::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image:url(/docs/assets/Local/pizzahistoria2.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+}
+
+.informacion{
+    position: absolute;
+    font-size: 15px;
+    z-index: 10;
+    background-color: #ca1717;
+    width: 85%;
+    height:-webkit-max-content;
+    height:-moz-max-content;
+    height:max-content;
+    border-radius: 5px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: #fff;
+}
+.piedepag{
+    grid-area: footer;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    height:auto;
+    background-color: #f00;
+    color: #fff;
+    font-family: 'Pompiere', cursive;
+    padding: 0.2em 0;
+}
+.piedepag div {
+    padding: 0.1em 0;
+}
+
+.datos{
+    font-weight: bold;
+}
+
+.creador__copy{
+    display: none;
+
+}
+.iconos__redes{
+    padding: 0 5px;
+
+}
+
+} 
+@media screen and (min-width:800px ){
+     
+    .texto{
+        padding: 1.5em 0;
+    }
+    .logo-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+        width: 25%;
+  }
+  .menu-container{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 75%;
+    font-family: 'Pompiere', cursive;
+    font-size: 1.2em;
+}
+
+.imagenfondo1{
+    grid-area: imagen1;
+    font-size: 18px;
+    height: 40em;
+    width: 100%;
+    position: relative;
+
+}
+.cuadro{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-areas: "descrip ";
+    width: 80%;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.descripcion{
+    padding: 1em 0;
+}
+.imagen2{
+    grid-area: imagen2;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "descrip nada";
+    background-color:transparent;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    font-size: 18px;
+}
+
+.historia{
+    background-color:#f9fccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+}
+.historia__imagen{
+     height: auto;
+}
+
+.informacion{
+    position: absolute;
+    font-size: 20px;
+    z-index: 10;
+    background-color: #ca1717;
+    width: 85%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    border-radius: 5px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;;
+    margin: auto;
+    color: #fff;
+}
+}
+
+
+@media screen and (min-width:1070px ){
+    .imagenfondo1{
+        grid-area: imagen1;
+        font-size: 25px;
+        height: 40em;
+        width: 100%;
+        position: relative;
+    
+    }
+    .imagen2{
+        font-size: 25px;
+    }
+    .imagenfondo1::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(/docs/assets/Local/pizzahistoria1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+.informacion{
+    position: absolute;
+    font-size: 20px;
+    z-index: 10;
+    background-color: #ca1717;
+    width: 85%;
+    height: 26em;
+    border-radius: 5px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;;
+    margin: auto;
+    color: #fff;
+}
+    .cuadro{
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: "descrip nada";
+        width: 80%;
+        height: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .descripcion{
+        padding:0;
+    }
+}
