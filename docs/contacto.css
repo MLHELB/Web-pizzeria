@@ -148,7 +148,7 @@ body{
 .fondo::before{
     content: "";
     position: absolute;
-    background-image: url(/docs/assets/Local/pizzacontacto.jpg);
+    background-image: url(assets/Local/pizzacontacto.jpg);
     width: 100%;
     height: 100%;
     background-size: cover;
