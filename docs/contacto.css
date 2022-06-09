@@ -267,7 +267,7 @@ body{
     position: absolute;
     height: 100%;
     width: 100%;
-    background-image: url(/docs/assets/Local/niñopizza.jpg);
+    background-image: url(assets/Local/niñopizza.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -449,7 +449,7 @@ body{
         position: absolute;
         height: 100%;
         width: 100%;
-        background-image: url(/docs/assets/Local/gentepizza.webp);
+        background-image: url(assets/Local/gentepizza.webp);
         background-attachment:inherit;
         background-repeat: inherit;
         background-size: cover;

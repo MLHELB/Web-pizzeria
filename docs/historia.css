@@ -143,7 +143,7 @@ body{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(/docs/assets/Local/pizzahistoria1.jpg);
+    background-image: url(assets/Local/pizzahistoria1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -230,7 +230,7 @@ body{
     width: 100%;
     height: 100%;
     position: absolute;
-    background-image:url(/docs/assets/Local/pizzahistoria2.jpg) ;
+    background-image:url(assets/Local/pizzahistoria2.jpg) ;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;   
@@ -623,15 +623,7 @@ body{
     .imagen2{
         font-size: 25px;
     }
-    .imagenfondo1::before{
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-image: url(/docs/assets/Local/pizzahistoria1.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+
     
 .informacion{
     position: absolute;

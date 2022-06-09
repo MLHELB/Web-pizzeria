@@ -140,7 +140,7 @@ body{
     width: 100%;
     height: 100%;
     position: absolute; 
-    background-image: url(/docs/assets/Local/pizzacarta.jpg);
+    background-image: url(assets/Local/pizzacarta.jpg);
     background-repeat: no-repeat;
     -webkit-filter: brightness(0.6);
             filter: brightness(0.6);
@@ -307,17 +307,6 @@ body{
         font-size: 15px;
         font-family: 'Pompiere', cursive;
         font-weight: bolder;
-    }
-    .cartaContenedor::before{
-        content:"";
-        width: 100%;
-        height: 100%;
-        position: absolute; 
-        background-image: url(/docs/assets/Local/pizzacarta.jpg);
-        background-repeat: no-repeat;
-        -webkit-filter: brightness(0.6);
-                filter: brightness(0.6);
-        background-size: cover;
     }
     .cartaContenedor__titulo{
         display: flex;

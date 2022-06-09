@@ -142,7 +142,7 @@ body{
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url(/docs/assets/Local/pizzaprincipal.jpeg);
+    background-image: url(assets/Local/pizzaprincipal.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-filter:brightness(0.8);
@@ -301,17 +301,6 @@ body{
         align-items: center;
         font-family: 'Pompiere', cursive;
       
-    }
-    .fondo::after{
-        content: "";
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        background-image: url(/docs/assets/Local/pizzaprincipal.jpeg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        -webkit-filter:brightness(0.8);
-                filter:brightness(0.8)
     }
     
     .contenedor-titulo{
