@@ -86,8 +86,8 @@ body{
     font-size: 1.4em;
     -webkit-animation-name: animacion-uno;
             animation-name: animacion-uno;
-    -webkit-animation-duration: 5s;
-            animation-duration: 5s;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
 }
 .nav__lista-menu{
     padding: 0 20px;
@@ -100,7 +100,7 @@ body{
 
 
 @-webkit-keyframes animacion-uno {
-    0%{transform: translateX(-100%);
+    0%{transform: translateX(-70%);
              
 }
 100%{
@@ -110,7 +110,7 @@ body{
 
 
 @keyframes animacion-uno {
-    0%{transform: translateX(-100%);
+    0%{transform: translateX(-70%);
              
 }
 100%{
