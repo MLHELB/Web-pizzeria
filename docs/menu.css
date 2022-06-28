@@ -351,12 +351,12 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 17px;
+        font-size: 15px;
         height:auto;
         background-color: #f00;
         color: #fff;
         font-family: 'Pompiere', cursive;
-        padding: 0.2em 0;
+        padding: 0.5em 0;
     }
     .piedepag div {
         padding: 0.1em 0;

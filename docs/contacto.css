@@ -267,8 +267,7 @@ body{
     position: absolute;
     height: 100%;
     width: 100%;
-    background-image: url(assets/Local/niñopizza.jpg);
-    background-attachment: fixed;
+    background-image: url(assets/Local/gentepizza.webp);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -389,10 +388,10 @@ body{
     }
     .informacion{
         position: absolute;
-        font-size: 15px;
+        font-size:18px;
         z-index: 10;
         background-color: #ca1717;
-        width: 55%;
+        width: 98%;
         height:-webkit-max-content;
         height:-moz-max-content;
         height:max-content;
@@ -473,12 +472,13 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 17px;
+        text-align: center;
+        font-size: 15px;
         height:auto;
         background-color: #f00;
         color: #fff;
         font-family: 'Pompiere', cursive;
-        padding: 0.2em 0;
+        padding: 0.5em 0;
     }
     .piedepag div {
         padding: 0.1em 0;
