@@ -314,7 +314,7 @@ body{
     }
     .botones{
         position: relative;
-        top: 1em;
+        top: 0em;
         margin: 0em;
         background-color:transparent;
         font-size: 1em;
