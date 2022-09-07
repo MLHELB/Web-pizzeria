@@ -17,8 +17,8 @@ body{
                                  animation-name: presentacion;  
                          -webkit-animation-fill-mode:forwards ;  
                                  animation-fill-mode:forwards ;
-                         -webkit-animation-duration: 4.5s;
-                                 animation-duration: 4.5s;
+                         -webkit-animation-duration: 2.5s;
+                                 animation-duration: 2.5s;
 }
 .oferta{
     grid-area: oferta;
@@ -90,8 +90,8 @@ body{
     font-size: 1.5em;
     -webkit-animation-name: animacion-uno;
             animation-name: animacion-uno;
-    -webkit-animation-duration: 4s;
-            animation-duration: 4s;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
 }
 .nav__lista-menu{
     padding: 0 20px;
