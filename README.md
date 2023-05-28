@@ -1,6 +1,6 @@
 # Proyecto Web Restaurant.
 
 
-
-### Nota:
-Demostracion, no es oficial.
+###NOTA
+Demostracion, no es oficial.    
+ 
