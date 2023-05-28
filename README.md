@@ -1,6 +1,6 @@
-# Mi 2da página web
+# Proyecto Web Restaurant.
 
-Esta es mi 2da página web inventada por mi.
+
 
 ### Nota:
-Solo es una demostración no es oficial. 
+Demostracion, no es oficial.
